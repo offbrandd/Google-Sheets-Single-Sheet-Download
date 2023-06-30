@@ -1,11 +1,16 @@
 {
     "manifest_version": 3,
     "name": "Sheets Single Page Download",
-    "description": "Sheets Single Page Download",
-    "version": "1.0",
+    "description": "An extension that downloads (xlsx) a single page that is currently being looked at from a Google Sheet",
+    "version": "1.01",
     "permissions": [
         "tabs"
     ],
+    "icons": {
+        "16": "16x16.png",
+        "48": "48x48.png",
+        "128": "128x128.png"
+      },
     "action": {
         "default_popup": "sheetsDL.html",
         "default_icon": "icon.png"
