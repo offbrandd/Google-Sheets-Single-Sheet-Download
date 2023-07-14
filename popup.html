@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      html {
+        height: 150; 
+        width: 200px;      
+      }
+      </style>
+    <title>Sheets Single Page DL Options</title>
+  </head>
+  <body>
+    <header>
+      <h1><font size="-1">Sheets Single Page Downloader</font></h1>
+      <p>Select download file format</p>
+    </header>
+    
+    <select id="format">
+      <option value="csv">.csv</option>
+      <option value="xlsx">.xlsx</option>
+
+    </select>
+
+    <div id="status">
+    <button id="download" style="margin-top: 10px; margin-right: 5px;">Download</button>
+    </div>
+
+
+
+    <script src="popup.js"></script>
+  </body>
+</html>

@@ -4,7 +4,8 @@
     "description": "An extension that downloads (xlsx) a single page that is currently being looked at from a Google Sheet",
     "version": "1.01",
     "permissions": [
-        "tabs"
+        "tabs",
+        "storage"
     ],
     "icons": {
         "16": "16x16.png",
@@ -12,7 +13,7 @@
         "128": "128x128.png"
       },
     "action": {
-        "default_popup": "sheetsDL.html",
+        "default_popup": "popup.html",
         "default_icon": "icon.png"
     }
 }
