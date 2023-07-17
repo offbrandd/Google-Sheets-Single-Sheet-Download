@@ -15,15 +15,20 @@ function modifyURL(url) {
 
 }
 async function getCurrentURL() {
-    
+    document.getElementById("errorText").style.visibility = "hidden";
     let queryOptions = { active: true, lastFocusedWindow: true };
     chrome.tabs.query(queryOptions, function(tabs){
-        console.log(tabs[0].url)
-        updatedUrl = modifyURL(tabs[0].url)
-        chrome.tabs.update({url: updatedUrl});
-        return tabs[0].url;
+        if(tabs[0].url.indexOf("docs.google.com/spreadsheets") != -1) {
+          updatedUrl = modifyURL(tabs[0].url)
+          chrome.tabs.update({url: updatedUrl});
+          window.close()
+          return tabs[0].url;
+        } else {
+          console.log("sheets not selected >:(")
+          document.getElementById("errorText").style.visibility = "visible";
+        }
+
     });
-    window.close()
   }
 
   // Saves options to chrome.storage
